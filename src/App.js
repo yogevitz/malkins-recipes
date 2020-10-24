@@ -12,6 +12,22 @@ import {
   CardContent,
 } from '@material-ui/core';
 
+const backgroundImages = [
+  "https://i.ibb.co/MBz9R2c/burger-patties-hor.jpg",
+  "https://i.ibb.co/sVwwVH1/Food-Photographed-by-Valeria-Aksakova-Image-via-Shutterstock-750x375.png",
+  "https://i.ibb.co/z8dbr3h/home-compare-02.jpg",
+  "https://i.ibb.co/c1bnJr6/lti0lqb4ej2erjgpx9yj.jpg",
+  "https://i.ibb.co/bR9SFyy/twenty20-c9afd8f5-12c5-4fd1-b42d-dd0767ca53c0.jpg",
+  "https://i.ibb.co/s6kSc1j/videos-for-learning-how-to-cook.jpg",
+];
+
+const style = {
+  backgroundImage: `url(${backgroundImages[Math.floor(Math.random() * backgroundImages.length)]})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+};
+
 function App() {
   const [isHeavy, setIsHeavy] = React.useState(true);
   const [isDairy, setIsDairy] = React.useState(false);
@@ -69,7 +85,7 @@ function App() {
   );
 
   return (
-    <div className="App">
+    <div className="App" style={style}>
       <Card className="card">
         <CardContent>
           {renderTitle()}
