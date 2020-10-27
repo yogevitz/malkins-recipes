@@ -1,0 +1,32 @@
+[
+  {
+    "isHeavy": true,
+    "isMeat": true,
+    "isDairy": true,
+    "link": "https://www.iheartnaptime.net/wp-content/uploads/2018/05/hamburger-recipe.jpg"
+  },
+  {
+    "isHeavy": false,
+    "isMeat": false,
+    "isDairy": false,
+    "link": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5563136.jpg"
+  },
+  {
+    "isHeavy": true,
+    "isMeat": true,
+    "isDairy": true,
+    "link": "https://addapinch.com/wp-content/uploads/2019/05/barts-best-hamburgers-recipe-876.jpg"
+  },
+  {
+    "isHeavy": true,
+    "isMeat": true,
+    "isDairy": false,
+    "link": "https://addapinch.com/wp-content/uploads/2019/05/barts-best-hamburgers-recipe-876.jpg"
+  },
+  {
+    "isHeavy": false,
+    "isMeat": true,
+    "isDairy": true,
+    "link": "https://addapinch.com/wp-content/uploads/2019/05/barts-best-hamburgers-recipe-876.jpg"
+  }
+]

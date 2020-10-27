@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import recipes from './data/recipes';
 
 import {
   Button,
@@ -33,6 +34,22 @@ function App() {
   const [isDairy, setIsDairy] = React.useState(false);
   const [isMeat, setIsMeat] = React.useState(true);
 
+  const handleGenerate = () => {
+    const filteredRecipes = recipes.filter(
+      (recipe) =>
+        (isHeavy === recipe.isHeavy) &&
+        (isDairy === recipe.isDairy) &&
+        (isMeat === recipe.isMeat)
+    );
+    if (filteredRecipes.length) {
+      const chosenRecipe =
+        filteredRecipes[Math.floor(Math.random() * filteredRecipes.length)];
+      window.open(chosenRecipe.link, "_blank");
+    } else {
+      alert('No relevant recipes, please try different settings!')
+    }
+  };
+
   const renderTitle = () => (
     <div className="title">
       <h2>Malkin's Recipes</h2>
@@ -48,7 +65,7 @@ function App() {
 
   const renderGenerate = () => (
     <Button
-      onClick={() => alert(`Generate ${isHeavy ? 'Heavy' : 'Light'}${isDairy ? ', Dairy' : ''}${isMeat ? ', Meat' : ''}!`)}
+      onClick={handleGenerate}
       variant="contained"
       color="secondary"
       className="generate"
